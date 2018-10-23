@@ -1,0 +1,12 @@
+git config --global user.name "Udov"
+git config --global user.email "APTEM"
+git config --global core.autocrlf input
+git config --global core.safecrlf true
+
+git clone git@github.com:Udafff/Python.git
+git add .
+git status 
+git commit -m "Create/Close Socket [client-server/TCPClinet.py]"
+git push -u origin master
+
+git remote set-url origin git@github.com:Udafff/Python.git
