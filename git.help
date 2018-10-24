@@ -2,6 +2,8 @@ git config --global user.name "Udov"
 git config --global user.email "APTEM"
 git config --global core.autocrlf input
 git config --global core.safecrlf true
+# Aliases (~/.gitconfig)
+git config --global alias.hist 'log --pretty=format:"%h %ad [%an] | %s%d" --graph --date=short'
 
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
