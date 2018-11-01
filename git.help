@@ -18,3 +18,17 @@ git push -u origin master
 
 git remote set-url origin git@github.com:Udafff/Python.git
 git remote -v
+
+### Steps to create Docker image
+# Create repository in web interface on github.com (for instance: Udafff/samba-server)
+
+# clone it localy in the terminal and create Dockerfile
+  git clone git@github.com:Udafff/samba-server
+  nano Dockerfile
+  git status
+  git add .
+  git commit -m "Init commit - Add Dockerfile"
+  git push
+
+# build Dockerfile directly from github.com
+  docker build --no-cache -t alpine/samba-server git@github.com:Udafff/samba-server
