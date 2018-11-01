@@ -32,3 +32,6 @@ git remote -v
 
 # build Dockerfile directly from github.com
   docker build --no-cache -t alpine/samba-server git@github.com:Udafff/samba-server
+
+# clean up images from a previous build
+  docker rmi $(docker images -qa -f 'dangling=true')
