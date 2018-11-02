@@ -34,7 +34,11 @@ git remote -v
   docker build --no-cache -t alpine/samba-server git@github.com:Udafff/samba-server
 
 # build Dockerfile from file
-docker build --no-cache -t alpine/samba-server git@github.com:Udafff/samba-server -f Dockerfile
+  docker build --no-cache -t alpine/samba-server -f Dockerfile .
 
 # clean up images from a previous build
   docker rmi $(docker images -qa -f 'dangling=true')
+
+# run container
+  docker run -ti --name samba-server --rm alpine/samba-server /bin/ash
+
